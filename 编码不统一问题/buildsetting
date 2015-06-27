@@ -1,0 +1,19 @@
+使用gradle时配置
+app model buidl.gradle
+因为远程仓库，as最新版本默认为
+jcenter()
+所以当项目中需要配置
+maven仓库的代码时候
+需做特殊配置
+如下
+//定义代码文件仓库位置，便于后续从此服务器上下载类库，maven仓库,还存在不常用的Ivy仓库
+allprojects {
+    repositories {
+        jcenter()
+        //        可以创建自己的仓库
+        //例如：maven {url 'https://maven.fabric.io/public'}
+        apply plugin: 'maven'
+    }
+}
+创建项目默认的配置只有
+jcenter
