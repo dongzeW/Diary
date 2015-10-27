@@ -35,3 +35,10 @@ git rm -f a.a 强行移除修改后文件（从暂存区和工作去中移除）
 git diff --cached 或 $git diff --staged 查看尚未提交的更新
 git stash push 将文件给push到一个临时空间中
 git stash pop  将文件从临时空间pop下来
+
+git push 最新版本的配置
+git config —global push.default matching or git config —global push.default simple
+两者的区别：
+maching：git push会把你本地的所有分支push到名称相对应的远程主机上，这意味着可能你会在不经意间push一些你原本没打算push的分支
+simple：git push仅仅把当前分支push到从当初git pull pull下来的那个对应分支上，另外，这个过程也会同时检查各个分支的名称是否对应
+增加chrome插件，用于下载github上的单个文件，（github mate，单机左面的icon即可下载）
