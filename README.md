@@ -127,5 +127,11 @@ __这个特技要注意星号和后面点文字要加空格__
 ...  
 <a name="title"/>  
 点击标题跳转到此  
-锚点:[回到目录](#index)
+锚点:[回到目录](#index)  
+代码高亮显示:  
+```
+public static void main(String[]args){}  
+```
+
+
 
