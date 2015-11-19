@@ -62,4 +62,4 @@ Action|带参数，无返回类型的接口
 onStart()和doOnSubscribe()用于出来请求前的操作，不同点在于，doOnSubscribe()可以指定执行的线程，而onStart()不行。
 
 	站在巨人的肩上，才能看得更远！
-[参考扔无线大神的文章](http://gank.io/post/560e15be2dca930e00da1083 "大神连接地址")  
+[参考扔物线大神的文章](http://gank.io/post/560e15be2dca930e00da1083 "大神连接地址")  
