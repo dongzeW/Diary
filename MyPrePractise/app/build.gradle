@@ -12,6 +12,10 @@ android {
     versionName "1.0"
   }
   buildTypes {
+    debug {
+      //自定义变量控制log的输出
+      buildConfigField("boolean", "LOG_DEBUG", "true")
+    }
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -19,7 +23,8 @@ android {
   }
   sourceSets {
     main {
-      res.srcDirs = ['src/main/res', 'src/main/res/layouts/item', 'src/main/res/layouts/dialog']
+      res.srcDirs =
+          ['src/main/res', 'src/main/res/layouts/item', 'src/main/res/layouts/dialog', 'src/main/res/layouts/glide']
     }
   }
 }
@@ -27,8 +32,6 @@ android {
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   //创建测试工具
-  testCompile 'junit:junit:4.12'
-  compile 'com.android.support:appcompat-v7:22.2.1'
   compile 'com.android.support:design:22.2.1'
   //chrome调试程序
   compile 'com.facebook.stetho:stetho-okhttp:1.2.0'
@@ -39,4 +42,14 @@ dependencies {
   compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
   //jake大神的神器 adrag
   compile 'com.jakewharton:butterknife:7.0.1'
+  compile('com.lsjwzh:materialloadingprogressbar:0.5.6-RELEASE')
+  //logger 输出工具,<compile 'com.github.orhanobut:logger:1.12'>日啊当前版本不存在
+  compile 'com.orhanobut:logger:1.8'
+  //图片管理工具类glide
+  compile 'com.github.bumptech.glide:glide:3.6.1'
+  compile 'com.mcxiaoke.volley:library:1.0.19'
+  compile 'io.reactivex:rxjava:1.0.16'
+  //a library for composing asynchronous and event-based programs using observable
+  //sequences for the java vm(一个在java vm上使用可观测的序列来组成异步的，基于事件的程序库)
+  compile 'io.reactivex:rxandroid:1.0.1'
 }

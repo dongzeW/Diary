@@ -2,6 +2,7 @@ package com.wwd.practise.myprepractise;
 
 import android.test.InstrumentationTestCase;
 import com.wwd.practise.myprepractise.customerview.ColorGeneratorCustomer;
+import com.wwd.practise.myprepractise.preglide.api.Api;
 
 /**
  * 创建者: wwd
@@ -11,13 +12,20 @@ import com.wwd.practise.myprepractise.customerview.ColorGeneratorCustomer;
 public class PractiseTest extends InstrumentationTestCase {
   private ColorGeneratorCustomer mColorGeneratorCustoemr;
 
+  private Api api;
+
   @Override protected void setUp() throws Exception {
     super.setUp();
     //实例化被测试对象
     mColorGeneratorCustoemr = ColorGeneratorCustomer.DEFAULT;
+    //api = new Api();
   }
 
-  public void testGetColor() throws Exception{
+  public void testGetColor() throws Exception {
     assertEquals(-686759, mColorGeneratorCustoemr.getColor("sf"));
+  }
+
+  public void testApiList() throws Exception {
+    assertEquals(75,(int)Api.SORTED_SIZE_KEYS.get(0));
   }
 }

@@ -14,6 +14,8 @@ import com.wwd.practise.myprepractise.R;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
+  public static final String TAG = BaseActivity.class.getSimpleName();
+
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
