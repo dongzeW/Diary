@@ -52,4 +52,6 @@ dependencies {
   //a library for composing asynchronous and event-based programs using observable
   //sequences for the java vm(一个在java vm上使用可观测的序列来组成异步的，基于事件的程序库)
   compile 'io.reactivex:rxandroid:1.0.1'
+  compile 'io.reactivex:rxjava-math:1.0.0'
+  compile 'com.jakewharton.rxbinding:rxbinding:0.2.0'
 }
