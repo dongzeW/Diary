@@ -5,6 +5,7 @@ import android.content.Context;
 import com.facebook.stetho.Stetho;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
+import com.wwd.practise.myprepractise.Http.HttpRequestQueue;
 
 /**
  * 创建者: wwd
@@ -25,6 +26,7 @@ public class MyApplication extends Application {
     //init
     mRefWatcher = LeakCanary.install(this);
     Stetho.initializeWithDefaults(this);
+    HttpRequestQueue.getInstance().createHttpQueue(this);
   }
 
   public static RefWatcher getRefWatcher(Context context) {

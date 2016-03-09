@@ -21,6 +21,10 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme.NoActionBar"
         >
+      <meta-data
+          android:name="JPUSH_APPKEY"
+          android:value="7a8e9be894d3e2d45491c01c"
+          />
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
